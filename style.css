@@ -1,4 +1,4 @@
-#pagesDiv
+/*#pagesDiv
 {
 	width: 600px;
 	margin: auto;
@@ -6,6 +6,11 @@
 #personalInfo
 {
 	margin: auto;
-	margin-top: 50px;
 	width: 1000px;
+}*/
+body 
+{
+	margin: auto;
+	position: relative;
+	display: table;
 }
