@@ -20,8 +20,6 @@
 			}
 			function LoadPageAjax(pageName, divId)
 			{
-				alert(pageName);
-				alert(divId);
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function()
 				{
@@ -37,7 +35,6 @@
 				}
 				xmlHttp.open("GET", pageName, true);
 				xmlHttp.send();
-				alert("test");
 			}
 			LoadPages(5);
 		</script>
