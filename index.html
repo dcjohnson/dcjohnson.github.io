@@ -1,7 +1,35 @@
 <html>
-	<body>
-		<p>
-			Hello World
-		</p>
+	<head>
+		<script type="text/javascript">
+			function LoadPages(pageSet)
+			{
+				var pageSetSize = 5;
+				var pages = ["8-24-2014.html"];
+				var startIndex = (pageSet - 1);
+				var curPageSet = pages.slice(startIndex, startIndex + pageSetSize);
+				for (page in pages)
+				{
+					page = ("pages\\" + page);
+					LoadPageAjax(page, "pagesDiv");
+				}
+			}
+			function LoadPageAjax(pageName, divId)
+			{
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function()
+				{
+					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+					{
+						document.getElementById(divId).innerHtml += xmlHttp.responseText;
+					}
+				}
+				xmlHttp.open("POST", pageName, true);
+				xmlHttp.send();
+			}
+		</script>
+	</head>
+	<body onload = "LoadPages(5);">
+		<div id = "pagesDiv">
+		</div>
 	</body>
 </html>
