@@ -25,7 +25,6 @@
 				{
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
-						alert(xmlHttp.responseText);
 						document.getElementById(divId).innerHTML += xmlHttp.responseText;
 					}
 					else if (xmlHttp.status == 404)
