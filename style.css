@@ -1,4 +1,4 @@
-/*#pagesDiv
+#pagesDiv
 {
 	width: 600px;
 	margin: auto;
@@ -7,10 +7,4 @@
 {
 	margin: auto;
 	width: 1000px;
-}*/
-body 
-{
-	margin: auto;
-	position: relative;
-	display: table;
 }
