@@ -1,35 +1,44 @@
 <html>
 	<head>
-		<script type="text/javascript">
+	</head>
+	<body>
+		<div id="pagesDiv">
+		</div>
+	</body>
+			<script type="text/javascript">
 			function LoadPages(pageSet)
 			{
 				var pageSetSize = 5;
 				var pages = ["8-24-2014.html"];
 				var startIndex = (pageSet - 1);
 				var curPageSet = pages.slice(startIndex, startIndex + pageSetSize);
-				for (page in pages)
+				for (pageIndex in pages)
 				{
-					page = ("pages\\" + page);
+					var page = ("pages\\" + pages[pageIndex]);
 					LoadPageAjax(page, "pagesDiv");
 				}
 			}
 			function LoadPageAjax(pageName, divId)
 			{
+				alert(pageName);
+				alert(divId);
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function()
 				{
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
-						document.getElementById(divId).innerHtml += xmlHttp.responseText;
+						alert(xmlHttp.responseText);
+						document.getElementById(divId).innerHTML += xmlHttp.responseText;
+					}
+					else if (xmlHttp.status == 404)
+					{
+						document.getElementById(divId).innerHTML += "Error.";
 					}
 				}
-				xmlHttp.open("POST", pageName, true);
+				xmlHttp.open("GET", pageName, true);
 				xmlHttp.send();
+				alert("test");
 			}
+			LoadPages(5);
 		</script>
-	</head>
-	<body onload = "LoadPages(5);">
-		<div id = "pagesDiv">
-		</div>
-	</body>
 </html>
