@@ -6,12 +6,9 @@
 		</div>
 	</body>
 			<script type="text/javascript">
-			function LoadPages(pageSet)
+			function LoadPages()
 			{
-				var pageSetSize = 5;
 				var pages = ["8-24-2014.html"];
-				var startIndex = (pageSet - 1);
-				var curPageSet = pages.slice(startIndex, startIndex + pageSetSize);
 				for (pageIndex in pages)
 				{
 					var page = ("pages/" + pages[pageIndex]);
@@ -35,6 +32,6 @@
 				xmlHttp.open("GET", pageName, true);
 				xmlHttp.send();
 			}
-			LoadPages(5);
+			LoadPages();
 		</script>
 </html>
