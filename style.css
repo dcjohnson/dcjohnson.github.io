@@ -7,11 +7,11 @@ body
 	width: 750px;
 	margin: auto;
 	margin-left: 15%;
-	background-color: rgb(250, 250, 250);
 }
 #personalInfo
 {
 	margin-left: 10%;
+	background-color: rgb(250, 250, 250);
 }
 div.date, div.category, div.tag 
 {
