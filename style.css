@@ -25,3 +25,7 @@ div.title
 {
 	text-align: center;
 }
+div.blogPost
+{
+	background-image: url("8-24-2014.jpeg");
+}
