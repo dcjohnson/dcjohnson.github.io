@@ -1,8 +1,6 @@
 body 
 {
 	background-color: rgb(20, 20, 20);
-	background: url(./pictures/titlePicture.jpg) no-repeat;
-	background-size: cover;
 }
 #pagesDiv
 {
