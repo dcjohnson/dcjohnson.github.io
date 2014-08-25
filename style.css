@@ -10,8 +10,9 @@
 }
 div.date, div.category, div.tag 
 {
-	background-color: rgb(50, 50, 50);
-	color: rgb(250, 250, 250);
+	color: rgb(250,250,250);
+	background-color: rgb(50,50,50);
+	border: 15px solid rgb(20,20,20);
 	margin-right: 10px;
 	margin-left: 10px;
 	display: inline-block;
