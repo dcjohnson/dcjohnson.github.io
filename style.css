@@ -29,6 +29,9 @@ div.date, div.category, div.tag, div.title, div.mainPost, div.footNote
 div.title
 {
 	text-align: center;
+	margin-left: 30%;
+	margin-right: 30%;
+
 }
 div.blogPost
 {
