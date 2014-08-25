@@ -10,9 +10,6 @@
 }
 div.date, div.category, div.tag 
 {
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
 	display: inline-block;
 }
 div.date, div.category, div.tag, div.title, div.mainPost, div.footNote 
@@ -22,4 +19,5 @@ div.date, div.category, div.tag, div.title, div.mainPost, div.footNote
 	border: 10px solid rgb(20, 20, 20);
 	padding-left: 10px;
 	padding-right: 10px;
+	margin: 10px;
 }
