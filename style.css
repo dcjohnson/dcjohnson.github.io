@@ -22,6 +22,7 @@ div.date, div.category, div.tag, div.title, div.mainPost, div.footNote
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 50px;
+	border-radius: 25px;
 }
 div.title
 {
