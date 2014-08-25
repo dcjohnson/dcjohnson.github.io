@@ -38,4 +38,6 @@ div.blogPost
 {
 	background: url(./pictures/mountains.jpg) no-repeat;
 	background-size: cover;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
