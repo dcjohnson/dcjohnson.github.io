@@ -23,18 +23,18 @@
 				for (pageIndex in pages)
 				{
 					var page = ("pages/" + pages[pageIndex][0]);
-					var image = pages[pageIndex][1];
-					LoadPageAjax(page, image, "pagesDiv");
+					LoadPageAjax(page, "pagesDiv");
 				}
 				var pageClasses = document.getElementsByClassName("blogPost");
 				for (pageIndex in pageClasses)
 				{
 					var page = pageClasses[pageIndex];
 					var image = pages[pageIndex][1];
+					alert(image);
 					page.style.background = "url(" + image + ") no-repeat";
 				}
 			}
-			function LoadPageAjax(pageName, imageUrl, divId)
+			function LoadPageAjax(pageName, divId)
 			{
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function()
@@ -42,7 +42,6 @@
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
 						document.getElementById(divId).innerHTML += xmlHttp.responseText;
-						// document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
 					}
 					else if (xmlHttp.status == 404)
 					{
