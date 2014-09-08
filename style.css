@@ -1,4 +1,4 @@
-body 
+body
 {
 	background-color: rgb(20, 20, 20);
 }
@@ -10,7 +10,7 @@ body
 	color: rgb(200, 200, 200);
 	border-radius: 25px;
 }
-div.date, div.category, div.tag 
+div.date, div.category, div.tag
 {
 	display: inline-block;
 }
@@ -40,4 +40,5 @@ div.blogPost
 	background-size: cover;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
