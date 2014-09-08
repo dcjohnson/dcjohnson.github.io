@@ -19,25 +19,23 @@
 			<script type="text/javascript">
 			function LoadPages()
 			{
-				var pageFiles = [["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
-				var pageClasses = document.getElementsByClassName("blogPost");
-				for (pageIndex in pageFiles)
+				var pages = [["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
+				for (pageIndex in pages)
 				{
-					var pageFile = ("pages/" + pageFiles[pageIndex][0]);
-					var image = pageFiles[pageIndex][1];
-					var pageClass = pageClasses[pageIndex];
-					LoadPageAjax(pageFile, image, pageClass);
+					var page = ("pages/" + pages[pageIndex][0]);
+					var image = pages[pageIndex][1];
+					LoadPageAjax(page, image, "blogPost");
 				}
 			}
-			function LoadPageAjax(pageName, imageUrl, div)
+			function LoadPageAjax(pageName, imageUrl, divId)
 			{
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function()
 				{
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
-						div.innerHTML += xmlHttp.responseText;
-						div.style.background = "url(" + imageUrl + ") no-repeat";
+						document.getElementById(divId).innerHTML += xmlHttp.responseText;
+						document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
 					}
 					else if (xmlHttp.status == 404)
 					{
