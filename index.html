@@ -22,7 +22,7 @@
 				var pages = [["9-8-2014.html","0"], ["8-24-2014.html","0"]];
 				for (pageIndex in pages)
 				{
-					var page = ("pages/" + pages[pageIndex]);
+					var page = ("pages/" + pages[pageIndex][0]);
 					LoadPageAjax(page, "pagesDiv");
 				}
 			}
