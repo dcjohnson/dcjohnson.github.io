@@ -26,7 +26,12 @@
 					var image = pages[pageIndex][1];
 					LoadPageAjax(page, image, "pagesDiv");
 				}
-				var pageClass = document.getElementsByClassName("blogPost");
+				var pageClasses = document.getElementsByClassName("blogPost");
+				for (pageIndex in pageClasses)
+				{
+					var page = pageClasses[pageIndex];
+					page.style.background = "url(" + pages[pageIndex][1] + ") no-repeat";
+				}
 			}
 			function LoadPageAjax(pageName, imageUrl, divId)
 			{
