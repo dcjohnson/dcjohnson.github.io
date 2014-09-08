@@ -30,7 +30,8 @@
 				for (pageIndex in pageClasses)
 				{
 					var page = pageClasses[pageIndex];
-					// page.style.background = "url(" + imageUrl + ") no-repeat";
+					var image = pages[pageIndex][1];
+					page.style.background = "url(" + image + ") no-repeat";
 				}
 			}
 			function LoadPageAjax(pageName, imageUrl, divId)
