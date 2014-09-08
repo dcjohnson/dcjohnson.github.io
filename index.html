@@ -26,6 +26,7 @@
 					var image = pages[pageIndex][1];
 					LoadPageAjax(page, image, "pagesDiv");
 				}
+				var pageClass = document.getElementsByClassName("blogPost");
 			}
 			function LoadPageAjax(pageName, imageUrl, divId)
 			{
@@ -35,7 +36,7 @@
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
 						document.getElementById(divId).innerHTML += xmlHttp.responseText;
-						document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
+						// document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
 					}
 					else if (xmlHttp.status == 404)
 					{
