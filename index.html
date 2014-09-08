@@ -35,7 +35,7 @@
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
 						document.getElementById(divId).innerHTML += xmlHttp.responseText;
-						document.getElementById(divId).style.background = imageUrl + " no-repeat";
+						document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
 					}
 					else if (xmlHttp.status == 404)
 					{
