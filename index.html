@@ -19,14 +19,15 @@
 			<script type="text/javascript">
 			function LoadPages()
 			{
-				var pages = [["9-8-2014.html","0"], ["8-24-2014.html","0"]];
+				var pages = [["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
 				for (pageIndex in pages)
 				{
 					var page = ("pages/" + pages[pageIndex][0]);
-					LoadPageAjax(page, "pagesDiv");
+					var image = pages[pageIndex][1];
+					LoadPageAjax(page, image, "pagesDiv");
 				}
 			}
-			function LoadPageAjax(pageName, divId)
+			function LoadPageAjax(pageName, imageUrl, divId)
 			{
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function()
@@ -34,6 +35,7 @@
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 					{
 						document.getElementById(divId).innerHTML += xmlHttp.responseText;
+						document.getElementById(divId).style.background = "url(" + imageUrl + ") no-repeat";
 					}
 					else if (xmlHttp.status == 404)
 					{
