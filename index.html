@@ -7,7 +7,11 @@
 	<script type="text/javascript">
 		function LoadBlog()
 		{
-			LoadPageAjax("htmlbody", "mainpages/blog.html", false);
+			var func = function(xmlHttpResponse)
+			{
+				document.getElementById("htmlbody").innerHTML += xmlHttpResponse;
+			}
+			LoadPageAjax(func, "mainpages/blog.html", false);
 			LoadPages();
 		}
 		function LoadPages()
@@ -16,7 +20,13 @@
 			for (pageIndex in pages)
 			{
 				var page = ("blog/" + pages[pageIndex][0]);
-				LoadPageAjax("pagesDiv", page, false);
+
+				var func = function(xmlHttpResponse)
+				{
+					document.getElementById("pagesDiv").innerHTML += xmlHttpResponse;
+				}
+
+				LoadPageAjax(func, page, false);
 			}
 			var pageClasses = document.getElementsByClassName("blogPost");
 			for (pageIndex in pageClasses)
@@ -27,17 +37,19 @@
 				page.style.backgroundSize = "cover";
 			}
 		}
-		function LoadPageAjax(divId, pageName, isAsync)
+		function LoadPageAjax(behaviorFunction, pageName, isAsync)
 		{
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.onreadystatechange = function()
 			{
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
-					document.getElementById(divId).innerHTML += xmlHttp.responseText;
+					behaviorFunction(xmlHttpResponse.responseText);
+					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
 				else if (xmlHttp.status == 404)
 				{
+					behaviorFunction("Error.");
 					document.getElementById(divId).innerHTML += "Error.";
 				}
 			}
