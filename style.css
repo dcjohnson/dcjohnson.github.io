@@ -2,7 +2,7 @@ body
 {
 	background-color: rgb(20, 20, 20);
 }
-#personalInfo
+.personalInfo
 {
 	margin-left: 10%;
 	margin-right: 35%;
