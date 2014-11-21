@@ -3,6 +3,9 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id = "htmlbody">
+		<button onclick = "LoadBlog();">
+			Blog
+		</button>
 	</body>
 	<script type="text/javascript">
 		function LoadBlog()
@@ -45,7 +48,6 @@
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
 					behaviorFunction(xmlHttp.responseText);
-					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
 				else if (xmlHttp.status == 404)
 				{
@@ -56,6 +58,5 @@
 			xmlHttp.open("GET", pageName, isAsync);
 			xmlHttp.send();
 		}
-		LoadBlog();
 	</script>
 </html>
