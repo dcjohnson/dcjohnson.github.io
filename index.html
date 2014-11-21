@@ -8,6 +8,14 @@
 		</button>
 	</body>
 	<script type="text/javascript">
+		function LoadPortfolio()
+		{
+			var func = function(xmlHttpResponse)
+			{
+				document.getElementById("htmlbody").innerHTML = xmlHttpResponse;
+			}
+			LoadPageAjax(func, "mainpages/portfolio.html", false);
+		}
 		function LoadBlog()
 		{
 			var func = function(xmlHttpResponse)
