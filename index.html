@@ -7,7 +7,8 @@
 	<script type="text/javascript">
 		function LoadBlog()
 		{
-			alert(LoadPageAjax("./mainpages/blog.html", false));
+			LoadPageAjax("mainpages/blog.html", false);
+			// alert(LoadPageAjax("./mainpages/blog.html", false));
 			// document.getElementsByTagName("body")[0].innerHTML += LoadPageAjax("mainpages/blog.html", false);
 			// LoadPages();
 		}
@@ -36,16 +37,11 @@
 			{
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
-					var response = xmlHttp.responseText;
-					// alert(xmlHttp.responseText);
-					return response;
-					// return xmlHttp.responseText;
-					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
+					document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
 				else if (xmlHttp.status == 404)
 				{
-					return "Error.";
-					// document.getElementById(divId).innerHTML += "Error.";
+					document.getElementById(divId).innerHTML += "Error.";
 				}
 			}
 			xmlHttp.open("GET", pageName, isAsync);
