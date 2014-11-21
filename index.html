@@ -2,15 +2,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body id = "htmlbody">
 	</body>
 	<script type="text/javascript">
 		function LoadBlog()
 		{
 			LoadPageAjax("mainpages/blog.html", false);
-			// alert(LoadPageAjax("./mainpages/blog.html", false));
-			// document.getElementsByTagName("body")[0].innerHTML += LoadPageAjax("mainpages/blog.html", false);
-			// LoadPages();
+			LoadPages();
 		}
 		function LoadPages()
 		{
@@ -18,8 +16,7 @@
 			for (pageIndex in pages)
 			{
 				var page = ("blog/" + pages[pageIndex][0]);
-				// var result = LoadPageAjax(page, false);
-				document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page, false);
+				LoadPageAjax(page, false);
 			}
 			var pageClasses = document.getElementsByClassName("blogPost");
 			for (pageIndex in pageClasses)
