@@ -36,7 +36,9 @@
 			{
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
-					return xmlHttp.responseText;
+					alert(xmlHttp.responseText);
+					return "Test";
+					// return xmlHttp.responseText;
 					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
 				else if (xmlHttp.status == 404)
