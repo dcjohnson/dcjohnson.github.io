@@ -1,55 +1,51 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript">
-			function LoadBlog()
-			{
-				document.getElementById("body").innerHTML = LoadPageAjax("mainpages/blog.html");
-			}
-			function LoadPages()
-			{
-				var pages = [["11-3-2014.html", "./pictures/foggy.jpg"], ["10-13-2014.html","./pictures/forest.jpg"], ["9-22-2014.html", "./pictures/galaxy.jpg"], ["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
-				for (pageIndex in pages)
-				{
-					var page = ("blog/" + pages[pageIndex][0]);
-					var result = LoadPageAjax(page, "pagesDiv");
-					document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page);
-				}
-				var pageClasses = document.getElementsByClassName("blogPost");
-				for (pageIndex in pageClasses)
-				{
-					var page = pageClasses[pageIndex];
-					var image = pages[pageIndex][1];
-					page.style.background = "url(" + image + ") no-repeat";
-					page.style.backgroundSize = "cover";
-				}
-			}
-			function LoadPageAjax(pageName)
-			{
-				var xmlHttp = new XMLHttpRequest();
-				xmlHttp.onreadystatechange = function()
-				{
-					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-					{
-						return xmlHttp.responseText;
-						// document.getElementById(divId).innerHTML += xmlHttp.responseText;
-					}
-					else if (xmlHttp.status == 404)
-					{
-						return "Error.";
-						// document.getElementById(divId).innerHTML += "Error.";
-					}
-				}
-				xmlHttp.open("GET", pageName, false);
-				xmlHttp.send();
-			}
-			// LoadPages();
-		</script>
 	</head>
 	<body id = "body">
-		<button onclick = "LoadBlog()">
-			Blog
-		</button>
 	</body>
-
+	<script type="text/javascript">
+		function LoadBlog()
+		{
+			document.getElementById("body").innerHTML = LoadPageAjax("mainpages/blog.html");
+		}
+		function LoadPages()
+		{
+			var pages = [["11-3-2014.html", "./pictures/foggy.jpg"], ["10-13-2014.html","./pictures/forest.jpg"], ["9-22-2014.html", "./pictures/galaxy.jpg"], ["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
+			for (pageIndex in pages)
+			{
+				var page = ("blog/" + pages[pageIndex][0]);
+				var result = LoadPageAjax(page, "pagesDiv");
+				document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page);
+			}
+			var pageClasses = document.getElementsByClassName("blogPost");
+			for (pageIndex in pageClasses)
+			{
+				var page = pageClasses[pageIndex];
+				var image = pages[pageIndex][1];
+				page.style.background = "url(" + image + ") no-repeat";
+				page.style.backgroundSize = "cover";
+			}
+		}
+		function LoadPageAjax(pageName)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function()
+			{
+				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+				{
+					return xmlHttp.responseText;
+					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
+				}
+				else if (xmlHttp.status == 404)
+				{
+					return "Error.";
+					// document.getElementById(divId).innerHTML += "Error.";
+				}
+			}
+			xmlHttp.open("GET", pageName, false);
+			xmlHttp.send();
+		}
+		LoadBlog();
+	</script>
 </html>
