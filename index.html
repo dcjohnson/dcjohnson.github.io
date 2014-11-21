@@ -16,8 +16,8 @@
 			for (pageIndex in pages)
 			{
 				var page = ("blog/" + pages[pageIndex][0]);
-				var result = LoadPageAjax(page, false);
-				document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page);
+				// var result = LoadPageAjax(page, false);
+				document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page, false);
 			}
 			var pageClasses = document.getElementsByClassName("blogPost");
 			for (pageIndex in pageClasses)
