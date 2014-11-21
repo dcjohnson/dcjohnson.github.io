@@ -7,7 +7,7 @@
 	<script type="text/javascript">
 		function LoadBlog()
 		{
-			document.getElementById("body").innerHTML = LoadPageAjax("mainpages/blog.html");
+			document.getElementById("body").innerHTML = LoadPageAjax("mainpages/blog.html", true);
 		}
 		function LoadPages()
 		{
@@ -15,7 +15,7 @@
 			for (pageIndex in pages)
 			{
 				var page = ("blog/" + pages[pageIndex][0]);
-				var result = LoadPageAjax(page, "pagesDiv");
+				var result = LoadPageAjax(page, false);
 				document.getElementById("pagesDiv").innerHTML += LoadPageAjax(page);
 			}
 			var pageClasses = document.getElementsByClassName("blogPost");
@@ -27,7 +27,7 @@
 				page.style.backgroundSize = "cover";
 			}
 		}
-		function LoadPageAjax(pageName)
+		function LoadPageAjax(pageName, isAsync)
 		{
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.onreadystatechange = function()
@@ -43,7 +43,7 @@
 					// document.getElementById(divId).innerHTML += "Error.";
 				}
 			}
-			xmlHttp.open("GET", pageName, false);
+			xmlHttp.open("GET", pageName, isAsync);
 			xmlHttp.send();
 		}
 		LoadBlog();
