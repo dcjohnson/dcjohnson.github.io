@@ -44,7 +44,7 @@
 			{
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
-					behaviorFunction(xmlHttpResponse.responseText);
+					behaviorFunction(xmlHttp.responseText);
 					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
 				else if (xmlHttp.status == 404)
