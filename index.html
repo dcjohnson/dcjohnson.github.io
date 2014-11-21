@@ -47,10 +47,12 @@
 			var pageClasses = document.getElementsByClassName("blogPost");
 			for (pageIndex in pageClasses)
 			{
-				var page = pageClasses[pageIndex];
-				var image = pages[pageIndex][1];
-				page.style.background = "url(" + image + ") no-repeat";
-				page.style.backgroundSize = "cover";
+				// var page = pageClasses[pageIndex];
+				// var image = pages[pageIndex][1];
+				// page.style.background = "url(" + image + ") no-repeat";
+				// page.style.backgroundSize = "cover";
+				pageClasses[pageIndex].style.background = "url(" + pages[pageIndex][1] + ") no-repeat";
+				pageClasses[pageIndex].style.backgroundSize = "cover";
 			}
 		}
 		function LoadPageAjax(behaviorFunction, pageName, isAsync)
