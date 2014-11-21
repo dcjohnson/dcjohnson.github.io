@@ -1,11 +1,56 @@
 <html>
-    <body>
-        <ul>
-            <li>
-                <a href = "fye.html">
-                    Fye Blog
-                </a>
-            </li>
-        </ul>
-    </body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="personalInfo">
+			<h1>
+				Dylan's First Year Experience!
+			</h1>
+			<p>
+				This is my blog for FYE!
+				<br/>
+				This blog will be the recording of my experiences for my first semester at UALR.
+			</p>
+		</div>
+		<div id="pagesDiv">
+		</div>
+	</body>
+			<script type="text/javascript">
+			function LoadPages()
+			{
+				var pages = [["11-3-2014.html", "./pictures/foggy.jpg"], ["10-13-2014.html","./pictures/forest.jpg"], ["9-22-2014.html", "./pictures/galaxy.jpg"], ["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
+				for (pageIndex in pages)
+				{
+					var page = ("pages/" + pages[pageIndex][0]);
+					LoadPageAjax(page, "pagesDiv");
+				}
+				var pageClasses = document.getElementsByClassName("blogPost");
+				for (pageIndex in pageClasses)
+				{
+					var page = pageClasses[pageIndex];
+					var image = pages[pageIndex][1];
+					page.style.background = "url(" + image + ") no-repeat";
+					page.style.backgroundSize = "cover";
+				}
+			}
+			function LoadPageAjax(pageName, divId)
+			{
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function()
+				{
+					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+					{
+						document.getElementById(divId).innerHTML += xmlHttp.responseText;
+					}
+					else if (xmlHttp.status == 404)
+					{
+						document.getElementById(divId).innerHTML += "Error.";
+					}
+				}
+				xmlHttp.open("GET", pageName, false);
+				xmlHttp.send();
+			}
+			LoadPages();
+		</script>
 </html>
