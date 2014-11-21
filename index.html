@@ -36,8 +36,9 @@
 			{
 				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 				{
-					alert(xmlHttp.responseText);
-					return "Test";
+					var response = xmlHttp.responseText;
+					// alert(xmlHttp.responseText);
+					return response;
 					// return xmlHttp.responseText;
 					// document.getElementById(divId).innerHTML += xmlHttp.responseText;
 				}
