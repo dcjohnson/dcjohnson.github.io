@@ -34,7 +34,7 @@
 			var classes = document.getElementsByClassName("hey");
 			for (var indivClass in classes)
 			{
-				indivClass.addEventListener("click", function(){Trap(0,2)});
+				indivClass.addEventListener("click", function(){Trap(0,2);});
 			}
 		}
 		function Trap(cur, curGoal)
@@ -48,7 +48,7 @@
 			{
 				var clone = indivClass.cloneNode(true);
 				indivClass.parentNode.replaceChild(indivClass, clone);
-				clone.addEventListener("click", function(){Trap(cur, curGoal * 2)});
+				clone.addEventListener("click", function(){Trap(cur, curGoal * 2);});
 			}
 		}
 		function LoadBlog()
