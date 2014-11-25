@@ -41,7 +41,7 @@ div.blogPost
 	margin-bottom: 10px;
 }
 
-div.button
+button
 {
 	background-color: rgb(128,128,128);
 	border-radius:20px;
