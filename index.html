@@ -13,6 +13,8 @@
 		</div>
 	</body>
 	<script type="text/javascript">
+		// var cur = 0;
+		// var currentGoal = 2;
 		function LoadPortfolio()
 		{
 			var func = function(xmlHttpResponse)
@@ -21,9 +23,26 @@
 			}
 			LoadPageAjax(func, "mainpages/portfolio.html", false);
 			LoadPortfolioPages();
+			SetTrap();
 		}
 		function LoadPortfolioPages()
 		{
+
+		}
+		function SetTrap()
+		{
+			var classes = document.getElementsByClassName("hey");
+			for (var indivClass in classes)
+			{
+				indivClass.addEventListener("click")
+			}
+		}
+		function Trap(cur, curGoal, resetFunction)
+		{
+			if (cur === curGoal)
+			{
+
+			}
 
 		}
 		function LoadBlog()
