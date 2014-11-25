@@ -23,25 +23,25 @@
 			}
 			LoadPageAjax(func, "mainpages/portfolio.html", false);
 			LoadPortfolioPages();
-			SetTrap();
+			SetTrap(0, 2);
 		}
 		function LoadPortfolioPages()
 		{
 
 		}
-		function SetTrap()
+		function SetTrap(initCur, initTarget)
 		{
 			var classes = document.getElementsByClassName("hey");
 			for (var indivClass in classes)
 			{
-				indivClass.addEventListener("click", function(){Trap(0,2);});
+				indivClass.addEventListener("click", function(){Trap(initCur, initTarget);});
 			}
 		}
 		function Trap(cur, curGoal)
 		{
 			if (cur === curGoal)
 			{
-				window.open("http://heyyeyaaeyaaaeyaeyaa.com/", "_blank")
+				window.open("http://heyyeyaaeyaaaeyaeyaa.com/", "_blank");
 			}
 			cur += 1;
 			for (var indivClass in document.getElementsByClassName("hey"))
