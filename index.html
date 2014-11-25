@@ -32,9 +32,13 @@
 		function SetTrap(initCur, initTarget)
 		{
 			var classes = document.getElementsByClassName("hey");
+			var func = function()
+			{
+				Trap(initCur, initTarget);
+			}
 			for (var indivClass in classes)
 			{
-				indivClass.addEventListener("click", function(){Trap(initCur, initTarget);});
+				indivClass.addEventListener("click", func);
 			}
 		}
 		function Trap(cur, curGoal)
