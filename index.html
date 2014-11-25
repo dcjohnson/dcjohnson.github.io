@@ -38,7 +38,7 @@
 			for (var index = 0; index < classes.length; index++)
 			{
 				var clone = classes[index].cloneNode(true);
-				classes[index].parentNode.replaceChild(classes[index], clone);
+				classes[index].parentNode.replaceChild(clone, classes[index]);
 				clone.addEventListener("click", func);
 			}
 		}
@@ -58,7 +58,7 @@
 			for (var index = 0; index < classes.length; index++)
 			{
 				var clone = classes[index].cloneNode(true);
-				classes[index].parentNode.replaceChild(classes[index], clone);
+				classes[index].parentNode.replaceChild(clone, classes[index]);
 				clone.addEventListener("click", func);
 			}
 		}
