@@ -36,9 +36,10 @@
 			{
 				Trap(initCur, initTarget);
 			}
-			for (var indivClass in classes)
+			var classes = document.getElementsByClassName("hey");
+			for (var index = 0; index < classes.length; index++)
 			{
-				indivClass.addEventListener("click", func);
+				classes[index].addEventListener("click", func);
 			}
 		}
 		function Trap(cur, curGoal)
@@ -46,13 +47,19 @@
 			if (cur === curGoal)
 			{
 				window.open("http://heyyeyaaeyaaaeyaeyaa.com/", "_blank");
+				curGoal *= 2;
 			}
 			cur += 1;
-			for (var indivClass in document.getElementsByClassName("hey"))
+			var func = function()
 			{
-				var clone = indivClass.cloneNode(true);
-				indivClass.parentNode.replaceChild(indivClass, clone);
-				clone.addEventListener("click", function(){Trap(cur, curGoal * 2);});
+				Trap(cur, curGoal);
+			}
+			var classes = document.getElementsByClassName("hey");
+			for (var index = 0; index < classes.length; index++)
+			{
+				var clone = classes[index].cloneNode(true);
+				classes[index].parentNode.replaceChild(classes[index], clone);
+				clone.addEventListener("click", func);
 			}
 		}
 		function LoadBlog()
