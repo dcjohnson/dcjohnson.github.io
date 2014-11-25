@@ -34,16 +34,22 @@
 			var classes = document.getElementsByClassName("hey");
 			for (var indivClass in classes)
 			{
-				indivClass.addEventListener("click")
+				indivClass.addEventListener("click", function(){Trap(0,2)});
 			}
 		}
-		function Trap(cur, curGoal, resetFunction)
+		function Trap(cur, curGoal)
 		{
 			if (cur === curGoal)
 			{
-
+				window.open("http://heyyeyaaeyaaaeyaeyaa.com/", "_blank")
 			}
-
+			cur += 1;
+			for (var indivClass in document.getElementsByClassName("hey"))
+			{
+				var clone = indivClass.cloneNode(true);
+				indivClass.parentNode.replaceChild(indivClass, clone);
+				clone.addEventListener("click", function(){Trap(cur, curGoal * 2)});
+			}
 		}
 		function LoadBlog()
 		{
