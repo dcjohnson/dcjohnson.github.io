@@ -13,8 +13,6 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		// var cur = 0;
-		// var currentGoal = 2;
 		function LoadPortfolio()
 		{
 			var func = function(xmlHttpResponse)
@@ -57,6 +55,7 @@
 			var classes = document.getElementsByClassName("hey");
 			for (var index = 0; index < classes.length; index++)
 			{
+				alert(index);
 				var clone = classes[index].cloneNode(true);
 				classes[index].parentNode.replaceChild(classes[index], clone);
 				clone.addEventListener("click", func);
