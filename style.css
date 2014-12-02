@@ -2,7 +2,8 @@ body
 {
 	background-color: rgb(20, 20, 20);
 }
-.personalInfo
+
+.personalInfo, div.content
 {
 	margin-left: 10%;
 	margin-right: 35%;
@@ -10,10 +11,12 @@ body
 	color: rgb(200, 200, 200);
 	border-radius: 25px;
 }
+
 div.date, div.category, div.tag
 {
 	display: inline-block;
 }
+
 div.date, div.category, div.tag, div.title, div.mainPost, div.footNote
 {
 	color: rgb(250, 250, 250);
@@ -34,6 +37,7 @@ div.title
 	margin-top: 10px;
 
 }
+
 div.blogPost
 {
 	padding-top: 10px;
@@ -41,7 +45,13 @@ div.blogPost
 	margin-bottom: 10px;
 }
 
-.buttons button
+div.headercontent
+{
+	display: block;
+	margin-bottom: 5px;
+}
+
+div.buttons button
 {
 	background-color: rgb(128,128,128);
 	border-radius:20px;
@@ -51,7 +61,7 @@ div.blogPost
 	border:none;
 }
 
-.buttons button:hover
+div.buttons button:hover
 {
 	background:rgb(50,50,50);
 	box-shadow: 0px 0px 1px rgb(0,0,0);
@@ -60,6 +70,19 @@ div.blogPost
 
 #links button.portfoliobutton
 {
+	background-color: rgb(128,128,128);
+	border-radius:20px;
+	color: rgb(0,0,0);
+	font-size: 20px;
+	cursor: pointer;
+	border:none;
 	margin-bottom: 4px;
 	display: block;
+}
+
+#links button.portfoliobutton:hover
+{
+	background:rgb(50,50,50);
+	box-shadow: 0px 0px 1px rgb(0,0,0);
+	transition-duration: .5s;
 }
