@@ -20,16 +20,13 @@ function LoadPortfolioPages()
         switch (buttons[index].id)
         {
             case "homepage":
-                var eventFunc = function() { LoadPageAjax(func, "portfolio/homepage.html", false); }
-                buttons[index].addEventListener("click", eventFunc);
+                buttons[index].addEventListener("click", function() { LoadPageAjax(func, "portfolio/homepage.html", false) });
                 break;
             case "portfolio":
-                var eventFunc = function() { LoadPageAjax(func, "portfolio/portfoliocontent.html", false); }
-                buttons[index].addEventListener("click", eventFunc);
+                buttons[index].addEventListener("click", function() { LoadPageAjax(func, "portfolio/portfoliocontent.html", false) });
                 break;
             case "writing":
-                var eventFunc = function() { LoadPageAjax(func, "portfolio/assingments.html", false); }
-                buttons[index].addEventListener("click", eventFunc);
+                buttons[index].addEventListener("click", function() { LoadPageAjax(func, "portfolio/assingments.html", false) });
                 break;
         }
     }
