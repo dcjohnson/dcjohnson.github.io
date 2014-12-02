@@ -58,7 +58,8 @@ div.blogPost
 	transition-duration: .5s;
 }
 
-div.hey button.portfoliobutton
+#links button.portfoliobutton
 {
+	margin-bottom: 4px;
 	display: block;
 }
