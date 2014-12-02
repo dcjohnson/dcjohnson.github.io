@@ -41,7 +41,7 @@ div.blogPost
 	margin-bottom: 10px;
 }
 
-.buttons button
+div.buttons button
 {
 	background-color: rgb(128,128,128);
 	border-radius:20px;
@@ -51,7 +51,7 @@ div.blogPost
 	border:none;
 }
 
-.buttons button:hover
+div.buttons button:hover
 {
 	background:rgb(50,50,50);
 	box-shadow: 0px 0px 1px rgb(0,0,0);
@@ -60,6 +60,19 @@ div.blogPost
 
 #links button.portfoliobutton
 {
+	background-color: rgb(128,128,128);
+	border-radius:20px;
+	color: rgb(0,0,0);
+	font-size: 20px;
+	cursor: pointer;
+	border:none;
 	margin-bottom: 4px;
 	display: block;
+}
+
+#links button.portfoliobutton:hover
+{
+	background:rgb(50,50,50);
+	box-shadow: 0px 0px 1px rgb(0,0,0);
+	transition-duration: .5s;
 }
