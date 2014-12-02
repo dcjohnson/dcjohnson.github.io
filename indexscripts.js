@@ -20,12 +20,15 @@ function LoadPortfolioPages()
         switch (buttons[index].id)
         {
             case "homepage":
+                alert("Home");
                 buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/homepage.html", false));
                 break;
             case "portfolio":
+                alert("folio");
                 buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/portfoliocontent.html", false));
                 break;
             case "writing":
+                alert("writ");
                 buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/assingments.html", false));
                 break;
         }
