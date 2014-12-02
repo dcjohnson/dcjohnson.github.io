@@ -10,7 +10,26 @@ function LoadPortfolio()
 }
 function LoadPortfolioPages()
 {
-
+    var buttons = document.getElementsByClassName("portfoliobutton");
+    var func = function(xmlHttpResponse)
+    {
+        document.getElementById("content").innerHTML = xmlHttpResponse;
+    }
+    for (var index = 0; index < buttons.length; index++)
+    {
+        switch (buttons[index].id)
+        {
+            case "homepage":
+                buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/homepage.html", false));
+                break;
+            case "portfolio":
+                buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/portfoliocontent.html", false));
+                break;
+            case "writing":
+                buttons[index].addEventListener("click", LoadPageAjax(func, "portfolio/assingments.html", false));
+                break;
+        }
+    }
 }
 function SetTrap(initCur, initTarget)
 {
