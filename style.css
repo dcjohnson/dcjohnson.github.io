@@ -41,12 +41,6 @@ div.blogPost
 	margin-bottom: 10px;
 }
 
-div.headercontent
-{
-	display: block;
-	margin-bottom: 5px;
-}
-
 div.buttons button
 {
 	background-color: rgb(128,128,128);
