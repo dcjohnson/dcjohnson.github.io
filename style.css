@@ -79,4 +79,5 @@ div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:ho
 	width: 200px;
 	margin auto;
 	margin-bottom: 4px;
+	text-decoration: none !important;
 }
