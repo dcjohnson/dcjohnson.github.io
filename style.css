@@ -51,7 +51,7 @@ div.headercontent
 	margin-bottom: 5px;
 }
 
-div.buttons button
+div.buttons button, #links button.portfoliobutton, #assignments a
 {
 	background-color: rgb(128,128,128);
 	border-radius:20px;
@@ -61,7 +61,7 @@ div.buttons button
 	border:none;
 }
 
-div.buttons button:hover
+div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:hover
 {
 	background:rgb(50,50,50);
 	box-shadow: 0px 0px 1px rgb(0,0,0);
@@ -70,21 +70,8 @@ div.buttons button:hover
 
 #links button.portfoliobutton
 {
-	background-color: rgb(128,128,128);
-	border-radius:20px;
-	color: rgb(0,0,0);
-	font-size: 20px;
-	cursor: pointer;
-	border:none;
 	margin-bottom: 4px;
 	display: block;
-}
-
-#links button.portfoliobutton:hover
-{
-	background:rgb(50,50,50);
-	box-shadow: 0px 0px 1px rgb(0,0,0);
-	transition-duration: .5s;
 }
 
 #assignments ul
@@ -94,19 +81,7 @@ div.buttons button:hover
 
 #assignments a
 {
-	background-color: rgb(128,128,128);
-	border-radius:20px;
-	color: rgb(0,0,0);
-	font-size: 20px;
-	cursor: pointer;
-	border:none;
 	margin-bottom: 4px;
 	display: block;
-}
-
-#assignments a:hover
-{
-	background:rgb(50, 50, 50);
-	box-shadow: 0px 0px 1px rgb(0, 0, 0);
-	transition-duration: .5s;
+	width: 40px;
 }
