@@ -75,7 +75,7 @@ div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:ho
 
 #assignments a
 {
-	display: block;
+	display: inline-block;
 	width: 200px;
 	margin auto;
 	margin-bottom: 4px;
