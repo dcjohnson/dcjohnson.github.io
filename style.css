@@ -86,3 +86,27 @@ div.buttons button:hover
 	box-shadow: 0px 0px 1px rgb(0,0,0);
 	transition-duration: .5s;
 }
+
+#assingments ul
+{
+	list-style-type: none;
+}
+
+#assingments a
+{
+	background-color: rgb(128,128,128);
+	border-radius:20px;
+	color: rgb(0,0,0);
+	font-size: 20px;
+	cursor: pointer;
+	border:none;
+	margin-bottom: 4px;
+	display: block;
+}
+
+#assingments a:hover
+{
+	background:rgb(50, 50, 50);
+	box-shadow: 0px 0px 1px rgb(0, 0, 0);
+	transition-duration: .5s;
+}
