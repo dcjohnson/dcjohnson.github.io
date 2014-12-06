@@ -3,7 +3,7 @@ body
 	background-color: rgb(20, 20, 20);
 }
 
-.personalInfo, #content
+div.personalInfo, #content
 {
 	margin-left: 10%;
 	margin-right: 35%;
@@ -45,12 +45,6 @@ div.blogPost
 	margin-bottom: 10px;
 }
 
-div.headercontent
-{
-	display: block;
-	margin-bottom: 5px;
-}
-
 div.buttons button, #links button.portfoliobutton, #assignments a
 {
 	background-color: rgb(128,128,128);
@@ -83,5 +77,4 @@ div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:ho
 {
 	margin-bottom: 4px;
 	display: block;
-	width: 40px;
 }
