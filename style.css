@@ -47,18 +47,18 @@ div.blogPost
 
 div.buttons button, #links button.portfoliobutton, #assignments a
 {
-	background-color: rgb(128,128,128);
-	border-radius:20px;
-	color: rgb(0,0,0);
+	background-color: rgb(128 ,128, 128);
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
 	font-size: 20px;
 	cursor: pointer;
-	border:none;
+	border: none;
 }
 
 div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:hover
 {
-	background:rgb(50,50,50);
-	box-shadow: 0px 0px 1px rgb(0,0,0);
+	background: rgb(50, 50, 50);
+	box-shadow: 0px 0px 1px rgb(0, 0, 0);
 	transition-duration: .5s;
 }
 
@@ -78,7 +78,7 @@ div.buttons button:hover, #assignments a:hover, #links button.portfoliobutton:ho
 {
 	display: inline-block;
 	width: 200px;
-	margin auto;
+	margin: auto;
 	margin-bottom: 4px;
 	text-decoration: none !important;
 }
