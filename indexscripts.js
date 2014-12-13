@@ -1,10 +1,15 @@
 function LoadPortfolio()
 {
-    var func = function(xmlHttpResponse)
+    var func1 = function(xmlHttpResponse)
     {
         document.getElementById("htmlbody").innerHTML = xmlHttpResponse;
     }
-    LoadPageAjax(func, "mainpages/portfolio.html", false);
+    LoadPageAjax(func1, "mainpages/portfolio.html", false);
+    var func2 = function(xmlHttpResponse)
+    {
+        document.getElementById("content").innerHTML = xmlHttpResponse;
+    }
+    LoadPageAjax(func2, "portfolio/homepage.html", false);
     LoadPortfolioPages();
     SetTrap(0, 2);
 }
@@ -19,9 +24,6 @@ function LoadPortfolioPages()
     {
         switch (buttons[index].id)
         {
-            case "homepage":
-                buttons[index].addEventListener("click", function() { LoadPageAjax(func, "portfolio/homepage.html", false) });
-                break;
             case "portfolio":
                 buttons[index].addEventListener("click", function() { LoadPageAjax(func, "portfolio/portfoliocontent.html", false) });
                 break;
@@ -38,7 +40,6 @@ function SetTrap(initCur, initTarget)
     {
         Trap(initCur, initTarget);
     }
-    var classes = document.getElementsByClassName("hey");
     for (var index = 0; index < classes.length; index++)
     {
         var clone = classes[index].cloneNode(true);
