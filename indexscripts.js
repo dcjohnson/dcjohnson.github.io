@@ -78,7 +78,11 @@ function LoadBlog()
 }
 function LoadBlogPages()
 {
-    var pages = [["11-3-2014.html", "./pictures/foggy.jpg"], ["10-13-2014.html","./pictures/forest.jpg"], ["9-22-2014.html", "./pictures/galaxy.jpg"], ["9-8-2014.html","./pictures/theworldisflat.jpg"], ["8-24-2014.html","./pictures/mountains.jpg"]];
+    var pages = [["11-3-2014.html", "./pictures/foggy.jpg"],
+                ["10-13-2014.html","./pictures/forest.jpg"],
+                ["9-22-2014.html", "./pictures/galaxy.jpg"],
+                ["9-8-2014.html","./pictures/theworldisflat.jpg"],
+                ["8-24-2014.html","./pictures/mountains.jpg"]];
     for (pageIndex in pages)
     {
         var page = ("blog/" + pages[pageIndex][0]);
