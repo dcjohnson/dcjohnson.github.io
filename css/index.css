@@ -9,3 +9,8 @@ body
 	text-align: center;
 	background-color: rgb(128, 128, 128);
 }
+
+#resume ul
+{
+	text-decoration: none;
+}
