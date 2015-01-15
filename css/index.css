@@ -5,14 +5,14 @@ body
 
 #resume
 {
-	margin: 0;
+	margin: auto;
 	width: 50%;
 	text-align: center;
 	background-color: rgb(128, 128, 128);
 	border-radius: 25px;
 }
 
-#resume li
+#resume ul
 {
-	text-decoration: none;
+	list-style-type: none;
 }
