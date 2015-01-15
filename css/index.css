@@ -19,5 +19,6 @@ body
 
 #resume ul li a
 {
+	text-decoration: none;
 	font-size: 2.5em;
 }
