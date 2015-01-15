@@ -1,4 +1,4 @@
- 
+
 % Imports and shit
 
 \documentclass{resume} % Use the custom resume.cls style
@@ -23,9 +23,9 @@
 	\egroup
 }
 
-\name{Connor Taffe} % Your name
-\address{3101 S. Taylor St. \\ Little Rock, Arkansas 72204} % Your address
-\address{(501)~$\cdot$~606~$\cdot$~1807 \\ cpaynetaffe@gmail.com} % Your phone number and email
+\name{Dylan Johnson} % Your name
+\address{3101 S. Taylor St. Apt 745 \\ Little Rock, Arkansas 72204} % Your address
+\address{(501)~$\cdot$~547~$\cdot$~1621 \\ dylanatasmsa@gmail.com} % Your phone number and email
 
 \begin{document}
 
@@ -36,37 +36,16 @@
 \begin{rSubsection}{Emerging Analytics Center, UALR}{October 2014 - Present}{Software Engineering Intern}{Little Rock, AR}
 
 	\item Worked under Dr. Carolina Cruz-Neira, the inventor of the CAVE system.
-	\item Developed Data Visualization solutions for Oculus Rift, CAVE system.
+	\item Developed Data Visualization solutions for Oculus Rift and CAVE system.
 	\item Used Unity 3D (scripting with C\#) for 3D programming and model manipulation.
+	\item Used OpenCV (used OpenCvSharp to integrate with C\#) for computer vision applications.
 \end{rSubsection}
 
-% Research Assistant
-\begin{rSubsection}{BioInformatics}{August - October 2014}{Research Assistant}{Little Rock, AR}
+\begin{rSubsection}{Search User Interface Team, Ancestry.com}{June 2014 - August 2014}{Software Engineering Intern}{Provo, UT}
 
-	\item Refactored Genetic algorithm code with an emphasis on common stylistic guidelines, and concurrency.
-\end{rSubsection}
-
-% CentOS freelance
-\begin{rSubsection}{CentOS Server Wordpress Installation}{August 2014}{Freelance Developer}{}
-
-	\item Installed Wordpress on a pre-imaged CentOS server.
-	\item Set up a mysql database and edited Wordpress configs.
-\end{rSubsection}
-
-% Mesher freelance
-\begin{rSubsection}{\href{http://github.com/cptaffe/Mesher}{Mesher}}{July - August 2014}{Freelance Developer}{}
-
-	\item Client side stl-editing application built atop THREE.js, a popular WebGL interface.
-	\item Provides a clean interface to many of the common operations done on STL models before 3D printing.
-	\item This application provides a interactable 3D interface for models generated from STL files.
-	\item Provides multiple modification and save options.
-\end{rSubsection}
-
-% Future Tek
-\begin{rSubsection}{Future Tek Inc.}{June - August 2012}{Contract Graphic Designer}{Columbus, MS}
-
-	\item Worked as a contract graphic designer to produce a new catalog, logo, and social media presence. All graphics were designed personally with Inkscape and Gimp.
-	\item This catalog is still in use (\href{http://www.futuretekinc.com/wp-content/uploads/2014/08/Future-Tek-Catalog.pdf}{link}).
+    \item Worked with a team of engineers to remove and update an old and restrictive codebase.
+    \item Used C\#, ASP.NET MVC3, Microsoft SQL Server, Visual Studio 2012, Team Foundatin Server, Windows 7 to develop software.
+	\item Used the SCRUM agile software development framework.
 \end{rSubsection}
 
 \end{rSection}
@@ -75,58 +54,44 @@
 
 \begin{rSection}{Education}
 
-\begin{rSubsection}{University of Arkansas, Little Rock}{June 2018}{B.S. in Computer Science}
+\begin{rSubsection}{University of Arkansas, Little Rock}{August 2014 - Expected Graduation Year: 2017}{B.S. in Computer Science}
 
-	\item Courses: Data Structures and Algorithms, Computer Systems and Assembly Language, Calculus II, Operating Systems, Databases, and Discrete Math.
+	\item Courses: Language Structure, Computer Systems and Assembly Language, Linear Algebra, Operating Systems, Databases, Theory of Computation.
 \end{rSubsection}
 
-% hspace{0.0em} somehow fixes the margin
-{\bf Cabot High School} \hfill {2014} \hspace{0.0em}
+\begin{rSubsection}{Arkansas School for Mathematics, Sciences, and the Arts}{August 2012 - May 2014}{High School Graduation}
 
-\begin{rSubsection}{Arkansas School for Mathematics, Sciences, and the Arts}{2013 - 2014}{}
-
-	\item First place Intel International Science and Engineering Fair project in Materials Engineering at the local level on my research into 3D printing large angles.
-	\item Courses: Computer Programming II
+	\item Third place Intel International Science and Engineering Fair project in Materials Engineering at the local level for my research on the optimization of aluminum can camping stoves.
+	\item Courses: AP Calculus AB, Calculus 2, Calculus 3 (Vector Calculus) Advanced placement Physics C Mechanics, Advanced Placement Physics C Electricity and Magnetism, Computer Programming 1, Computer Programming 2, Data Structures and Algorithms, Introduction to Web Application Development, Graphics Programming, Discrete Mathematics.
 \end{rSubsection}
-
-
-% hspace{0.0em} somehow fixes the margin
-{\bf Mississippi School for Mathematics and Sciences} \hfill {2012 - 2013} \hspace{0.0em}
 
 \end{rSection}
 
+\begin{rSection}{Online}
 
-% sections wrapping pages looks junky
+	\item {\href{https://github.com/DylanTheVillain}{https://github.com/DylanTheVillain}}
+	\item {\href{https://www.linkedin.com/in/DylanJohnson1}{https://www.linkedin.com/in/DylanJohnson1}}
+\end{rSection}
+
 \clearpage
 
 % Personal Projects
 \begin{rSection}{Personal Projects}
 
-% Tcpwsh project
-\begin{rSubsection}{\href{http://github.com/cptaffe/tcpwsh}{TcpWsh}}{November 2014}{}{}
+% CodeBin
+\begin{rSubsection}{\href{https://github.com/DylanTheVillain/CodeBin}{CodeBin}}{December 2014 - Present}{}{}
 
-	\item Shell script which opens tcpdump with root privileges and routes. packets using an anonymous FIFO to wireshark running with standard permissions.
-	\item Prevents wireshark from being exploited remotely.
-	\item Allows utilization of tcpdump for efficient in-kernel packet filtering.
+	\item An online Python development environment.
+	\item The backend was build using Python 3.4 and Django 1.7.
+	\item The frontend uses Ace for the code editor and Skulpt for the Python interpreter.
+	\item Currently the user can create new projects and access them with permalinks, fork projects, browse projects, and make projects public or private.
 \end{rSubsection}
 
-% Lispy project
-\begin{rSubsection}{\href{http://github.com/cptaffe/lispy}{Lispy}}{September - November 2014}{}{}
-
-	\item Lisp-like interpreter written in Python
-	\item Producer-consumer threading optimizes stages
-	\item Lazy-evaluation of defined variables
-	\item lambda functions
-	\item recursive lambdas
-	\item EBNF formal definition of the language
-\end{rSubsection}
-
-% Lispy project
-\begin{rSubsection}{\href{http://github.com/cptaffe/bf}{bf}}{November 2014 - Present}{}{}
-
-	\item Optimizing BrainFuck just-in-time compiler
-	\item Emits x86\_64 instructions to executable mmap'd pages
-	\item Producer-Consumer concurrent architecture with a REPL interface
+\begin{rSubsection}{Rust}{November 2014 - Present}{}{}
+	\item My current projects through which I am learning the Rust Programming Language that is being developed by Mozilla.
+	\item {\href{https://github.com/DylanTheVillain/Rust-Game}{Rust-Game}} My current attempt to build a small multiplayer game in Rust.
+	\item {\href{https://github.com/DylanTheVillain/Little-Rust-Tcp}{Little-Rust-Tcp}} The small TCP Socket library that I am writing for the game.
+	\item Both of the mentioned projects are being managed using Cargo.
 \end{rSubsection}
 
 \end{rSection}
@@ -138,36 +103,40 @@
 {\bf General Programming}
 
 \btab{1.1}{ l l }
-	Languages: & C++, C, Java, Go, Python, C\#, Rust \\
-	Version Control Systems: & git \\
-	Networking: & C, Java, Go, Python \\
-\etab
-
-{\bf Operating Systems}
-
-\btab{1.1}{ l l }
-	BSD: & OpenBSD, FreeBSD, Dragonfly BSD, OS X \\
-	Linux: & Debian, Red Hat Linux, CentOS, Fedora, Ubuntu, Manjaro \\
-	Windows: & 2000, XP, 7, 8
-\etab
-
-{\bf Unix System Administration}
-
-\btab{1.1}{ l l }
-	Proficient in shell: & bash, sh, tcsh \\
-	Proficient with utils: & grep, sed, ssh, vim, nano, crontab, tcpdump, tar etc. \\
-	Experience with: & configuration files, package managers, compilation \\
-	Familiar with *nix concepts: & users, permissions, processes, cron jobs, files and i/o redirection, \\
-	& daemons, etc.
+	Languages: & C, Java, Python, C\#, Rust, JavaScript. \\
+	Version Control Systems: & git, Team Foundation Server. \\
+	Package Managers: & Cargo(Rust), PIP(Python). \\
 \etab
 
 {\bf Web Programming}
 
 \btab{1.1}{ l l }
-	Server side: & Python, Go, Java, Php, and SQL (MySQL) \\
-	Client side: & JavaScript (JQuery, THREE.js, etc.), CSS, (X)HTML \\
-	Servers: & Apache, nginx, lighttpd \\
-	Written Servers in: & Python, Go \\
+	Server side: & Python, C\#, PHP, and SQL (MySQL, Microsoft SQL Server). \\
+	Client side: & JavaScript, CSS, (X)HTML. \\
+	Servers: & Apache, Internet Information Services. \\
+	Web Frameworks: & Django, ASP.NET MVC3 C\#. \\
+	Common Gateway Interface: & Python. \\
+\etab
+
+{\bf Development Enviromnents}
+
+\btab{1.1}{ l l }
+    IDEs: & Visual Studio 2012, Visual Studio 2013, Monodevelop, Xamarin. \\
+	Text Editors: & Vim, Sublime Text, Atom. \\
+\etab
+
+{\bf Operating Systems}
+
+\btab{1.1}{ l l }
+	Linux: & Debian, Ubuntu, Manjaro, Linux Mint, Slackware. \\
+	Windows: & XP, 7, 8. \\
+\etab
+
+{\bf Unix System Administration}
+
+\btab{1.1}{ l l }
+	Proficient with command line utils: & grep, ssh, vim, nano, tar etc. \\
+	Experience with: & configuration files, package managers, compilation, makefiles. \\
 \etab
 
 \end{rSection}
