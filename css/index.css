@@ -6,7 +6,7 @@ body
 #resume
 {
 	margin: auto;
-	width: 20%;
+	width: 40%;
 	text-align: center;
 	background-color: rgb(128, 128, 128);
 	border-radius: 25px;
@@ -15,4 +15,9 @@ body
 #resume ul
 {
 	list-style-type: none;
+}
+
+#resume ul li a
+{
+	font-size: 2.5em;
 }
