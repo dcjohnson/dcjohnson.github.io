@@ -11,11 +11,13 @@ body
 	border-radius: 25px;
 }
 
-/*#content ul
+#header
 {
-	margin-top: 20%;
-	list-style-type: none;
-}*/
+	margin:  auto;
+	width; 40%;
+	text-align: center;
+	border-radius: 25px;
+}
 
 #content a
 {
