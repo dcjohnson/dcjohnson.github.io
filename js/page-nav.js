@@ -17,3 +17,10 @@ function loadProjects() {
 	}
 	ajaxGet(requestFunc, "../pages/projects.html", true);
 }
+
+function loadResume() {
+	var requestFunc = function(responseText) {
+		document.getElementById("content").innerHTML = responseText;
+	}
+	ajaxGet(requestFunc, "../pages/resume.html", true);
+}
