@@ -24,3 +24,10 @@ function loadResume() {
 	}
 	ajaxGet(requestFunc, "../pages/resume.html", true);
 }
+
+function loadContact() {
+	var requestFunc = function(responseText) {
+		document.getElementById("content").innerHTML = responseText;
+	}
+	ajaxGet(requestFunc, "../pages/resume.html", true);
+}
