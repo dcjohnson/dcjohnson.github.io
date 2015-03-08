@@ -1,20 +1,33 @@
 <html>
 	<head>
 		<link rel = "stylesheet" type = "text/css" href = "css/index.css">
+		<script src = "./js/page-nav.js"></script>
 	</head>
-	<body>
+	<body onload = "loadProjects()">
+		<div id = "navbar">
+			<ul>
+				<li>
+					<button>
+						Projects
+					</button>
+				</li>
+				<li>
+					<button>
+						Resume
+					</button>
+				</li>
+			</ul>
+		</div>
 		<div id = "header">
 			<h1>
 				Dylan Conrad Johnson
 			</h1>
 			<p>
-				This is Dylan's personal Github website. Hosting courtesy of Github.
+				I am a computer science student at the University of Arkansas at Little Rock.
+				This site contains descriptions of my current projects as well as my resume.
 			</p>
 		</div>
 		<div id = "content">
-			<a href = "pdf/resume.pdf" target = "_blank">
-				Dylan's Resume.
-			</a>
 		</div>
 	</body>
 </html>
