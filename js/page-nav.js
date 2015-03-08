@@ -29,5 +29,5 @@ function loadContact() {
 	var requestFunc = function(responseText) {
 		document.getElementById("content").innerHTML = responseText;
 	}
-	ajaxGet(requestFunc, "../pages/resume.html", true);
+	ajaxGet(requestFunc, "../pages/contact.html", true);
 }
