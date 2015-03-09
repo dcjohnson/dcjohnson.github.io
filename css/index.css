@@ -6,4 +6,5 @@
 
 #content {
 	align-content: center;
+	display: flex;
 }
