@@ -4,7 +4,7 @@ function ajaxGet(onRequestFunc, requestData, isAsync) {
 		if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
 			onRequestFunc(xmlHttp.responseText);
 		} else if(xmlHttp.status == 404) {
-			onRequesetFunc("Page not found.");
+			onRequestFunc("Page not found.");
 		}
 	}
 	xmlHttp.open("GET", requestData, isAsync);
