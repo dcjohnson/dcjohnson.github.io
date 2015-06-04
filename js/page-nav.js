@@ -11,23 +11,26 @@ function ajaxGet(onRequestFunc, requestData, isAsync) {
 	xmlHttp.send();
 }
 
-function loadProjects() {
+function loadPageInContent(pageUrl) {
 	var requestFunc = function(responseText) {
 		document.getElementById("content").innerHTML = responseText;
-	}
-	ajaxGet(requestFunc, "../pages/projects.html", true);
+	};
+	ajaxGet(requestFunc, pageUrl, true);
 }
 
-function loadResume() {
-	var requestFunc = function(responseText) {
-		document.getElementById("content").innerHTML = responseText;
-	}
-	ajaxGet(requestFunc, "../pages/resume.html", true);
+function init() {
+	var projects = document.getElementById("projects");
+	var resume = document.getElementById("resume");
+	var contact = document.getElementById("contact");
+	projects.onclick = function() {
+		loadPageInContent("../pages/projects.html");
+	};
+	resume.onclick = function() {
+		loadPageInContent("../pages/resume.html");
+	};
+	contact.onclick = function() {
+		loadPageInContent("../pages/contact.html");
+	};
 }
 
-function loadContact() {
-	var requestFunc = function(responseText) {
-		document.getElementById("content").innerHTML = responseText;
-	}
-	ajaxGet(requestFunc, "../pages/contact.html", true);
-}
+init();
