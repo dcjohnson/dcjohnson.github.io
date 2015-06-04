@@ -17,6 +17,7 @@ body {
 	border: none;
 	background: none;
 	background-color: rgb(64, 64, 64);
+	font-size: 16;
 }
 
 #content {
