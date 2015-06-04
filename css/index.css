@@ -13,10 +13,9 @@ body {
 }
 
 #navbar ul li button {
-	padding: 0;
 	border: none;
 	background: none;
-	color: rgb(64, 64, 64);
+	background-color: rgb(64, 64, 64);
 }
 
 #content {
