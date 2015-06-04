@@ -29,6 +29,10 @@ body {
 	color: rgb(255, 255, 255);
 }
 
+#navbar ul li button:focus {
+	outline: 0;
+}
+
 #content {
 	margin: 0px auto;
 	width: 90%;
