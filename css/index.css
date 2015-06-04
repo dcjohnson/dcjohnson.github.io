@@ -10,7 +10,7 @@ body {
 #navbar ul li {
 	display: inline-block;
 	float: right;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 button.nav {
