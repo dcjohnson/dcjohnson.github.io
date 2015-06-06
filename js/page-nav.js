@@ -31,6 +31,7 @@ function init() {
 	contact.onclick = function() {
 		loadPageInContent("../pages/contact.html");
 	};
+	loadPageInContent("../pages/projects.html")
 }
 
 init();
