@@ -2,6 +2,7 @@
 DOC = resume.tex
 
 all:
+	mkdir ../pdf
 	pdflatex $(DOC)
 	mv $(DOC:.tex=.pdf) ../pdf/
 
